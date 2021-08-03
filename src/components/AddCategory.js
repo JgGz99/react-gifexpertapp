@@ -22,15 +22,18 @@ const AddCategory = ({categoria,setCategoria}) => {
 
        
     }
-
-
     return ( 
         <>
             <h2>AddCategory</h2>
             <form onSubmit={handleAdd}>
-                <input type="text" onChange={leerAnime} placeholder="Inserta tu anime aqui!!!"></input>
-                <button type ="submit"> Agregar</button>
+                <div className="row justify-content-center">
+                    <div className="col-md-5">
+                    <input className="form-control" type="text" onChange={leerAnime} placeholder="Inserta tu anime aqui!!!"></input>
+                
+                    </div>
+                </div>
             </form>
+            
         </>
      );
 }

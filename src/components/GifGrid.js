@@ -10,7 +10,7 @@ const GifGrid = ({ categoria }) => {
     const { data: images, loading } = useFetchGif(categoria);
 
     return (
-        <>
+        <div className ="container">
             <h3>{categoria}</h3>
             {loading ? 
                 <div className="sk-cube-grid">
@@ -24,14 +24,14 @@ const GifGrid = ({ categoria }) => {
                 <div className="sk-cube sk-cube8"></div>
                 <div className="sk-cube sk-cube9"></div>
             </div> : null}
-            <div className="card_grid">
+            <div className="row">
 
                 {images.map((img) => {
                     return <GifGridItem key={img.id} {...img} />
                 })}
 
             </div>
-        </>
+        </div>
     )
 }
 
