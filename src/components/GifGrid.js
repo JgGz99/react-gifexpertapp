@@ -10,8 +10,8 @@ const GifGrid = ({ categoria }) => {
     const { data: images, loading } = useFetchGif(categoria);
 
     return (
-        <div className ="container">
-            <h3>{categoria}</h3>
+        <div className="mt-4">
+            {categoria? <h3 className="bg-primary text-light text-center mb-3">{categoria}</h3>:null}
             {loading ? 
                 <div className="sk-cube-grid">
                 <div className="sk-cube sk-cube1"></div>
